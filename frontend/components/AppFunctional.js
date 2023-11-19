@@ -87,11 +87,21 @@ export default function AppFunctional(props) {
         </h3>
       </div>
       <div id="keypad">
-        <button id="left">SOL</button>
-        <button id="up">YUKARI</button>
-        <button id="right">SAĞ</button>
-        <button id="down">AŞAĞI</button>
-        <button id="reset">reset</button>
+        <button id="left" onClick={ilerle}>
+          SOL
+        </button>
+        <button id="up" onClick={ilerle}>
+          YUKARI
+        </button>
+        <button id="right" onClick={ilerle}>
+          SAĞ
+        </button>
+        <button id="down" onClick={ilerle}>
+          AŞAĞI
+        </button>
+        <button id="reset" onClick={reset}>
+          reset
+        </button>
       </div>
           value={email}
           onChange={onChange}
