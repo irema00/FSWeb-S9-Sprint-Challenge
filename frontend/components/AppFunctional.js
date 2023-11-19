@@ -15,6 +15,7 @@ export default function AppFunctional(props) {
   function getXY(indexB) {
     const X = (indexB % 3) + 1;
     const Y = parseInt(indexB / 3) + 1;
+    return [X, Y];
   }
 
   function getXYMesaj() {
