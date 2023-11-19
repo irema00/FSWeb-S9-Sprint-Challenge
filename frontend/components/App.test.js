@@ -27,3 +27,20 @@ test("Koordinat Değişimi", () => {
   expect(coordinates).toHaveTextContent("Koordinatlar (2, 2)");
 });
 
+test("Adım Sayacı", () => {
+  const steps = screen.getByText(/kere ilerlediniz/);
+
+  fireEvent.click(screen.getByText("YUKARI"));
+  expect(steps).toHaveTextContent("1 kere ilerlediniz");
+
+  fireEvent.click(screen.getByText("SOL"));
+  expect(steps).toHaveTextContent("2 kere ilerlediniz");
+
+  fireEvent.click(screen.getByText("SAĞ"));
+  fireEvent.click(screen.getByText("SAĞ"));
+  expect(steps).toHaveTextContent("4 kere ilerlediniz");
+
+  fireEvent.click(screen.getByText("AŞAĞI"));
+  expect(steps).toHaveTextContent("5 kere ilerlediniz");
+});
+
