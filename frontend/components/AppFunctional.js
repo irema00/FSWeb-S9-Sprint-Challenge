@@ -20,9 +20,8 @@ export default function AppFunctional(props) {
   }
 
   function getXYMesaj() {
-    // Kullanıcı için "Koordinatlar (2, 2)" mesajını izlemek için bir state'in olması gerekli değildir.
-    // Koordinatları almak için yukarıdaki "getXY" helperını ve ardından "getXYMesaj"ı kullanabilirsiniz.
-    // tamamen oluşturulmuş stringi döndürür.
+    const cords = getXY(indexB);
+    return `Koordinatlar (${cords[0]}, ${cords[1]})`;
   }
 
   function reset() {
@@ -54,7 +53,7 @@ export default function AppFunctional(props) {
   return (
     <div id="wrapper" className={props.className}>
       <div className="info">
-        <h3 id="coordinates">Koordinatlar (2, 2)</h3>
+        <h3 id="coordinates">{getXYMesaj()}</h3>
         <h3 id="steps">0 kere ilerlediniz</h3>
       </div>
       <div id="grid">
