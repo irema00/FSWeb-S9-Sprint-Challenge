@@ -33,9 +33,19 @@ export default function AppFunctional(props) {
   }
 
   function sonrakiIndex(yon) {
-    // Bu helper bir yön ("sol", "yukarı", vb.) alır ve "B" nin bir sonraki indeksinin ne olduğunu hesaplar.
-    // Gridin kenarına ulaşıldığında başka gidecek yer olmadığı için,
-    // şu anki indeksi değiştirmemeli.
+    if (yon === "left" && indexB % 3 !== 0) {
+      return indexB - 1;
+    }
+    if (yon === "up" && indexB >= 3) {
+      return indexB - 3;
+    }
+    if (yon === "right" && indexB % 3 !== 2) {
+      return indexB + 1;
+    }
+    if (yon === "down" && indexB <= 5) {
+      return indexB + 3;
+    }
+    return indexB;
   }
 
   function ilerle(evt) {
