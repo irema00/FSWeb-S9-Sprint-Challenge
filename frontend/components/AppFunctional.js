@@ -10,7 +10,7 @@ export default function AppFunctional(props) {
   const [message, setMessage] = useState(initialMessage);
   const [email, setEmail] = useState(initialEmail);
   const [steps, setSteps] = useState(initialSteps);
-  const [indexB, setIndex] = useState(initialIndex);
+  const [indexB, setIndexB] = useState(initialIndex);
 
   function getXY(indexB) {
     const X = (indexB % 3) + 1;
@@ -28,7 +28,7 @@ export default function AppFunctional(props) {
     setMessage(initialMessage);
     setEmail(initialEmail);
     setSteps(initialSteps);
-    setIndex(initialIndex);
+    setIndexB(initialIndex);
   }
 
   function sonrakiIndex(yon) {
