@@ -82,7 +82,9 @@ export default function AppFunctional(props) {
         ))}
       </div>
       <div className="info">
-        <h3 id="message"></h3>
+        <h3 testid="message" id="message">
+          {message}
+        </h3>
       </div>
       <div id="keypad">
         <button id="left">SOL</button>
