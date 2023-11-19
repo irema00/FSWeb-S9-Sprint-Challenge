@@ -10,11 +10,11 @@ export default function AppFunctional(props) {
   const [message, setMessage] = useState(initialMessage);
   const [email, setEmail] = useState(initialEmail);
   const [steps, setSteps] = useState(initialSteps);
-  const [index, setIndex] = useState(initialIndex);
+  const [indexB, setIndex] = useState(initialIndex);
 
-  function getXY() {
-    // Koordinatları izlemek için bir state e sahip olmak gerekli değildir.
-    // Bunları hesaplayabilmek için "B" nin hangi indexte olduğunu bilmek yeterlidir.
+  function getXY(indexB) {
+    const X = (indexB % 3) + 1;
+    const Y = parseInt(indexB / 3) + 1;
   }
 
   function getXYMesaj() {
@@ -47,6 +47,7 @@ export default function AppFunctional(props) {
 
   function onSubmit(evt) {
     // payloadu POST etmek için bir submit handlera da ihtiyacınız var.
+    // const endpoint= "http://localhost:9000/api/result"
   }
 
   return (
