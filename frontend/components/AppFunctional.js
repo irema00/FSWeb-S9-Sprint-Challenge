@@ -49,6 +49,23 @@ export default function AppFunctional(props) {
 
   function onSubmit(evt) {
     evt.preventDefault();
+    const [x, y] = getXY(indexB);
+    axios
+      .post("http://localhost:9000/api/result", {
+        x,
+        y,
+        steps: steps,
+        email: email,
+      })
+      .then((res) => {
+        console.log("POST success:", res.data);
+        setMessage(res.data.message);
+      })
+      .catch((err) => {
+        console.log("POST error", err);
+        setMessage(err.response.data.message);
+      });
+    setEmail("");
   }
 
   return (
