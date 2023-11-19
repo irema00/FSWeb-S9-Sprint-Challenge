@@ -44,3 +44,10 @@ test("Adım Sayacı", () => {
   expect(steps).toHaveTextContent("5 kere ilerlediniz");
 });
 
+test("Reset Butonu", () => {
+  fireEvent.click(screen.getByText("YUKARI"));
+  fireEvent.click(screen.getByText("reset"));
+
+  expect(coordinates).toHaveTextContent("(2, 2)");
+  expect(steps).toHaveTextContent("0 kere ilerlediniz");
+});
