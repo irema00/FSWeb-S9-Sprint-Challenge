@@ -49,10 +49,27 @@ export default function AppFunctional(props) {
   }
 
   function ilerle(evt) {
-    // Bu event handler, "B" için yeni bir dizin elde etmek üzere yukarıdaki yardımcıyı kullanabilir,
-    // ve buna göre state i değiştirir.
-  }
+    const yon = evt.target.id;
+    const yeniIndexB = sonrakiIndex(yon);
+    if (yeniIndexB !== indexB) {
+      setSteps(steps + 1);
+      setIndexB(yeniIndexB);
+    } else {
+      let hataMesaji = "";
 
+      if (yon === "right") {
+        hataMesaji = "Sağa gidemezsiniz";
+      } else if (yon === "down") {
+        hataMesaji = "Aşağıya gidemezsiniz";
+      } else if (yon === "left") {
+        hataMesaji = "Sola gidemezsiniz";
+      } else if (yon === "up") {
+        hataMesaji = "Yukarıya gidemezsiniz";
+      }
+
+      setMessage(hataMesaji);
+    }
+  }
   function onChange(evt) {
     setEmail(evt.target.value);
   }
