@@ -5,3 +5,7 @@ import AppFunctional from "./AppFunctional";
 test("hata olmadan render ediliyor", () => {
   render(<AppFunctional />);
 });
+
+beforeEach(() => {
+  render(<AppFunctional />);
+});
