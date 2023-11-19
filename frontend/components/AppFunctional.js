@@ -2,11 +2,10 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 
-// önerilen başlangıç stateleri
 const initialMessage = "";
 const initialEmail = "";
 const initialSteps = 0;
-const initialIndex = 4; //  "B" nin bulunduğu indexi
+const initialIndex = 4;
 
 export default function AppFunctional(props) {
   const [message, setMessage] = useState(initialMessage);
