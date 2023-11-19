@@ -103,6 +103,7 @@ export default function AppFunctional(props) {
           reset
         </button>
       </div>
+      <form onSubmit={onSubmit}>
           value={email}
           onChange={onChange}
         <input id="submit" type="submit"></input>
