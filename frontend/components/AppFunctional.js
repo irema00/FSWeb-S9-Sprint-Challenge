@@ -48,8 +48,7 @@ export default function AppFunctional(props) {
   }
 
   function onSubmit(evt) {
-    // payloadu POST etmek için bir submit handlera da ihtiyacınız var.
-    // const endpoint= "http://localhost:9000/api/result"
+    evt.preventDefault();
   }
 
   return (
