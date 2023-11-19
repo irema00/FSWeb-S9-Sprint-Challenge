@@ -44,7 +44,7 @@ export default function AppFunctional(props) {
   }
 
   function onChange(evt) {
-    // inputun değerini güncellemek için bunu kullanabilirsiniz
+    setEmail(evt.target.value);
   }
 
   function onSubmit(evt) {
@@ -75,8 +75,8 @@ export default function AppFunctional(props) {
         <button id="down">AŞAĞI</button>
         <button id="reset">reset</button>
       </div>
-      <form>
-        <input id="email" type="email" placeholder="email girin"></input>
+          value={email}
+          onChange={onChange}
         <input id="submit" type="submit"></input>
       </form>
     </div>
